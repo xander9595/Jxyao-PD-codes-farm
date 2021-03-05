@@ -217,6 +217,3 @@ for tt= 1: nt
 end
 vtk_save(pvd)
 
-
-
-@code_warntype f1()
