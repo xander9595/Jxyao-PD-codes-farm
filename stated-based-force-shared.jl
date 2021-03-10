@@ -132,7 +132,6 @@ end
             end
         end
     end
-    return force_x
 end
 
 @everywhere cif3_kernal_shared!(force_state_x, force_state_y, force_x, force_y,families) =
