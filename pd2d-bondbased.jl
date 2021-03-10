@@ -194,7 +194,7 @@ for tt= 1: nt
     endtime[tt,1] = ctime
 
 
-
+    #plots the data
     if mod(tt-1,50) == 0
         Damage = zeros(ndivx,ndivy)
         DISP_Y = zeros(ndivx,ndivy)
