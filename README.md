@@ -1,4 +1,4 @@
-# PD-bond-based
+# Jxyao PD codes farm
 Peridynamics codes based on julia.
 
 Created by Yao Jiaxu.
