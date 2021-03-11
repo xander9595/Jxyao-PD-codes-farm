@@ -1,2 +1,5 @@
 # PD-bond-based
-Bond based peridynamics code based on julia
+Peridynamics codes based on julia
+Created by Yao Jiaxu
+Tongji University
+
