@@ -24,7 +24,7 @@ nodefam = m.nodefam
 
 fail = ones(Int8, totnode, maxfam)
 
-
+#Inserts a crack
 for i = 1:totnode
     for j =  1:numfam[i,1]
         cnode = nodefam[pointfam[i,1]+j-1,1]
