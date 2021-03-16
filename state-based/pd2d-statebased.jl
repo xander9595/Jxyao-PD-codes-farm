@@ -105,7 +105,7 @@ force_y = SharedArray(zeros(tot_nodes,1))
 pvd = paraview_collection("pd2d", append=true)
 
 for tt = 1:300
-    #println("tt=$(tt)")
+    println("tt=$(tt)")
     time = tt * time_step
     #bottom boundary condition
     my_vel[1,totint+1:totbottom] .= 0
@@ -163,8 +163,6 @@ for tt = 1:300
         DISP_Y = zeros(ndivx,ndivy)
         xyz = zeros( 2, ndivx, ndivy)
         cntnum = 1
-        b = sum(my_damage)
-        println("my_damage = $b")
         for i = 1:ndivy
             for j= 1:ndivx
                 xyz[:,j,i]=Coords[:,cntnum]+my_disp[:,cntnum]
