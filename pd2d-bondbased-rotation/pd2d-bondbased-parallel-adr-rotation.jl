@@ -26,8 +26,6 @@ const thick = dx
 const area = dx^2
 const vol = dx^3
 const emod = 192.0e9
-const bc = 9*emod/(pi*thick*delta^3) #bc: Bond constant
-
 
 @everywhere @with_kw struct para
     ndivx::Int = 100
@@ -44,13 +42,12 @@ const bc = 9*emod/(pi*thick*delta^3) #bc: Bond constant
     thick::Float64 = dx
     radij::Float64 = dx/2
     GIc::Float64 = 160
-    GIIc::Float64 = 1634
     possion::Float64 = 1/4
-    bc::Float64 = 7.5*emod/(pi*thick*delta^3)
-    bk::Float64 = 2.5*emod/(pi*thick*delta^3)
+    bc::Float64 = 6*emod/(pi*thick*delta^3*(1-possion))
+    bk::Float64 = 6*emod*(1-3*possion)/(pi*thick*delta^3*(1-possion^2))
     dens::Float64 = 2500.0
     scr0::Float64 = sqrt(2*GIc/(bc*pi*thick*delta^4))
-    rcr0::Float64 = sqrt(240*GIIc/(bc*pi*thick*delta^4))
+    wcr0::Float64 = 3*GIc/(2*pi*delta^3)
 end
 
 pa= para()
